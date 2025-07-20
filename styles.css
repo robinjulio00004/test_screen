@@ -1,18 +1,3 @@
-a-scene{/*Default portrait*/
-	width: 100vw;
-	height: 100vh;
-
-}   
-
-@media (orientation: lanscape){/*Default Landscape*/
-a-scene{
-	width: 100vh;
-	height: 100vw;
-
-}  
-}
-
-
  .valores {
       position: absolute;
       bottom: 10;
