@@ -21,7 +21,7 @@
 	</div>
 	<!-- Scene -->
       <!--<a-scene embedded arjs embedded renderer="logarithmicDepthBuffer: true;" vr-mode-ui="enabled: false">-->
-	<a-scene>
+	<a-scene screen-orientation-handler>
 	<a-assets> <!-- Asset management system. -->
 	<a-asset-item id="glb_model1" src="casco.gltf"></a-asset-item>
 	<a-asset-item id="glb_model2" src="https://www.dropbox.com/scl/fi/3u9fzpqe7j5tw7sngbygv/astronaut_motion.gltf?rlkey=og4gl23af75pep5i1hllro0ng&st=c3fwisiy&dl=0"></a-asset-item>
@@ -48,15 +48,11 @@
 </body>
 	<!-- Javascript -->
 <script>
-	let y1=0, y2=0, y3=0, y4=0, y5=0, y6=0, Y=0, Ay=0, W=0, flancoy=0, pasos=0, contador=0;
-	const vcamera=20;
-	const scene=document.querySelector('a-scene');
-	let cam=document.querySelector('#cameraview');
-	let campost=cam.object3D.position;
-	let mcam=document.querySelector('#mcamera');
-	let quat=mcam.object3D.quaternion;
+	AFRAME.registerComponent('screen-orientation-handler',{
+		init:function(){
+		const scene=this.el;
 
-	screen.orientation.addEventListener('change',()=>{
+		screen.orientation.addEventListener('change',()=>{
 		if(screen.orientation.type.startsWith('landscape'))
 		{
 		scene.setAttribute('width','100vh');
@@ -68,6 +64,15 @@
 		scene.setAttribute('height','100vh');
 		}
 		});
+		}
+	});
+	let y1=0, y2=0, y3=0, y4=0, y5=0, y6=0, Y=0, Ay=0, W=0, flancoy=0, pasos=0, contador=0;
+	const vcamera=20;
+	const scene=document.querySelector('a-scene');
+	let cam=document.querySelector('#cameraview');
+	let campost=cam.object3D.position;
+	let mcam=document.querySelector('#mcamera');
+	let quat=mcam.object3D.quaternion;
 
 	window.addEventListener("devicemotion", (event)=> {
 	var accely=event.acceleration.y;
