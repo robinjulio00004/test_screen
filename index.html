@@ -19,9 +19,9 @@
 	 <div id="out3"></div>
 	<div id="out4"></div>
 	</div>
-	<div id="orientation-message">Favor de rotar dispositivo a modo vertical</div>
+	
 	<!-- Scene -->
-      <a-scene id="portrait-scene" embedded arjs embedded renderer="logarithmicDepthBuffer: true;" xr-mode-ui="enabled: true">
+      <a-scene id="portrait-scene" embedded><!-- arjs embedded renderer="logarithmicDepthBuffer: true;" xr-mode-ui="enabled: true">-->
 	<a-assets> <!-- Asset management system. -->
 	<a-asset-item id="glb_model1" src="casco.gltf"></a-asset-item>
 	<a-asset-item id="glb_model2" src="https://www.dropbox.com/scl/fi/3u9fzpqe7j5tw7sngbygv/astronaut_motion.gltf?rlkey=og4gl23af75pep5i1hllro0ng&st=c3fwisiy&dl=0"></a-asset-item>
@@ -45,6 +45,7 @@
 		</a-entity>
 		</a-entity>
       </a-scene>
+	<div id="orientation-message">Favor de rotar dispositivo a modo vertical</div>
 </body>
 	<!-- Javascript -->
 <script>
