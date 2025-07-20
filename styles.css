@@ -1,4 +1,38 @@
- .valores {
+#portrait-scene
+{
+ width:100vw;
+ height:100vh;
+ position: absolute;
+ top:0;
+ left:0;
+ transform-origin:0 0;
+ display:none;
+}
+#orientation-message
+{
+ position:fixed;
+ top:50%;
+ left:50%;
+ transform: translate(-50%,-50%);
+ background-color: rgba(0,0,0,0.7);
+ color: white;
+ padding:20px;
+ border-radius:10px;
+ display:none;
+}
+.portrait #portrait-scene{
+ display:block;
+ transform:rotate(90deg) translateX(-100%);
+ width:100vh;
+ height:100vw;
+}
+.portrait #orientation-message{
+display:none;
+}
+.landscape #orientation-message{
+display: block;
+}
+.valores {
       position: absolute;
       bottom: 10;
       left: 0;
