@@ -26,42 +26,17 @@
     </a-scene>
 
     <script>
-      const deviceOrientationComponent = {
-  init() {
-    const overlayDiv = document.getElementById('orientationOverlay')
-    const checkOrientation = (orientation) => {
-      // portrait mode
-      if (orientation === 0) {
-        // hide overlay
-        overlayDiv.style.display = 'none'
-      }
-      // landscape mode
-      if (orientation === 90 || orientation === -90) {
-        // show overlay
-        overlayDiv.style.display = 'flex'
-      }
-    }
-       /*screen.orientation.lock('portrait');
-      const scene = document.getElementById('myScene');
-      const orientationMessage = document.getElementById('orientationMessage');
+    window.addEventListener("deviceorientation", handleOrientation, true);
 
-      function checkOrientation() {
-        const isPortrait = window.matchMedia("(orientation: portrait)").matches;
+    function handleOrientation(event) {
+  const absolute = event.absolute;
+  const alpha = event.alpha;
+  const beta = event.beta;
+  const gamma = event.gamma;
 
-        if (isPortrait) {
-          scene.classList.add('hidden');
-          orientationMessage.classList.remove('hidden');
-        } else {
-          scene.classList.remove('hidden');
-          orientationMessage.classList.add('hidden');
-        }
-      }
+  // Do stuff with the new orientation data
+}
 
-      // Initial check
-      checkOrientation();
-
-      // Check on orientation change
-      window.addEventListener('orientationchange', checkOrientation);*/
       
     </script>
   </body>
