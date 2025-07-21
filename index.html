@@ -8,13 +8,15 @@
     <title>A-Frame Portrait Lock</title>
     <script src="aframe-v1.7.0.min.js"></script>
   </head>
-  <div id="orientationOverlay">
-  <div id="message">
-    Modo Horizontal desactivado, favor de cambiar a modo vertical
-  </div>
 
-</div>
-  <body>
+  <body style="margin : 0px; overflow: hidden;">
+    
+    <div id="orientationOverlay">
+      <div id="message">
+        Modo Horizontal desactivado, favor de cambiar a modo vertical.
+      </div>
+    </div>
+    
     <a-scene device-orientation id="myScene" class="aframe-scene">
       <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
       <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
