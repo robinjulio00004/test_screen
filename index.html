@@ -32,11 +32,11 @@
     </a-scene>
 
     <script>
-AFRAME.registerComponent('device-orientation', deviceOrientationComponent)
- const deviceOrientationComponent = {
-  init() {
-    const overlayDiv = document.getElementById('orientationOverlay')
-    const checkOrientation = (orientation) => {
+
+	AFRAME.registerComponent('device-orientation', {
+  init: function () {
+	  const overlayDiv = document.getElementById('orientationOverlay');
+	      const checkOrientation = (orientation) => {
       // portrait mode
       if (orientation === 0) {
         // hide overlay
@@ -48,6 +48,8 @@ AFRAME.registerComponent('device-orientation', deviceOrientationComponent)
         overlayDiv.style.display = 'flex'
       }
     }
+  }
+});
 
 	/*    
     window.addEventListener("deviceorientation", handleOrientation, true);
