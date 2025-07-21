@@ -1,3 +1,8 @@
+    a-scene {
+      position: fixed;
+      top: 0;
+      left: 0
+    }
 .valores {
       position: absolute;
       bottom: 10;
