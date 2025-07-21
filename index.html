@@ -47,10 +47,10 @@
         const isPortrait = window.matchMedia("(orientation: portrait)").matches;
 
         if (isPortrait) {
-          scene.classList.remove('hidden');
+          scene.classList.add('hidden');
           orientationMessage.classList.remove('hidden');
         } else {
-          scene.classList.add('hidden');
+          scene.classList.remove('hidden');
           orientationMessage.classList.add('hidden');
         }
       }
