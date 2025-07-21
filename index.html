@@ -10,7 +10,13 @@
   </head>
 
   <body style="margin : 0px; overflow: hidden;">
-    
+    <!-- Valores de salida -->
+	<div class="valores">
+ 	 <div id="out1"></div>
+	 <div id="out2"></div>
+	 <div id="out3"></div>
+	<div id="out4"></div>
+	</div>
     <div id="orientationOverlay">
       <div id="message">
         Modo Horizontal desactivado, favor de cambiar a modo vertical.
@@ -33,6 +39,10 @@
   const alpha = event.alpha;
   const beta = event.beta;
   const gamma = event.gamma;
+
+  document.getElementById("out1").innerHTML=absolute;
+	document.getElementById("out2").innerHTML=alpha;
+	document.getElementById("out3").innerHTML=gamma;
 
   // Do stuff with the new orientation data
 }
