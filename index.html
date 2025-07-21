@@ -24,7 +24,7 @@
       </div>
     </div>
     
-    <a-scene device-orientation embedded arjs embedded renderer="logarithmicDepthBuffer: true;" xr-mode-ui="enabled: false">
+    <a-scene embedded arjs embedded renderer="logarithmicDepthBuffer: true;" xr-mode-ui="enabled: false">
       <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
       <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
       <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
@@ -42,44 +42,7 @@
 	document.getElementById("out3").innerHTML=y
 	document.getElementById("out4").innerHTML=0;
 	    });
-		
-
-/*
-	AFRAME.registerComponent('device-orientation', {
-  init: function () {
-	  const overlayDiv = document.getElementById('orientationOverlay');
-	      const checkOrientation = (orientation) => {
-      // portrait mode
-      if (orientation === 0) {
-        // hide overlay
-        overlayDiv.style.display = 'none'
-      }
-      // landscape mode
-      if (orientation === 90 || orientation === -90) {
-        // show overlay
-        overlayDiv.style.display = 'flex'
-      }
-    }
-  }
-});*/
-
-	/*    
-    window.addEventListener("deviceorientation", handleOrientation, true);
-
-    function handleOrientation(event) {
-  const absolute = event.absolute;
-  const alpha = event.alpha;
-  const beta = event.beta;
-  const gamma = event.gamma;
-
-  document.getElementById("out1").innerHTML=absolute;
-	document.getElementById("out2").innerHTML=alpha;
-	document.getElementById("out3").innerHTML=gamma;
-
-  // Do stuff with the new orientation data
-}*/
-
-      
+	    
     </script>
   </body>
 </html>
