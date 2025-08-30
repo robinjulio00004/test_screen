@@ -23,16 +23,17 @@
       <a-scene embedded arjs embedded renderer="logarithmicDepthBuffer: true;" xr-mode-ui="enabled: true">
 	<a-assets> <!-- Asset management system. -->
 	<a-asset-item id="glb_model1" src="casco.gltf"></a-asset-item>
-	<a-asset-item id="glb_model2" src="https://www.dropbox.com/scl/fi/3u9fzpqe7j5tw7sngbygv/astronaut_motion.gltf?rlkey=og4gl23af75pep5i1hllro0ng&st=c3fwisiy&dl=0"></a-asset-item>
-		
+	<a-asset-item id="glb_model2" src="astronaut_motion.glb"></a-asset-item>
+	<a-asset-item id="glb_model3" src="spaceship.glb"></a-asset-item>
+	<a-asset-item id="glb_model4" src="usa_rocket.glb"></a-asset-item>
   	</a-assets>
 	<!-- Models and primitive objects -->
+	<a-entity gltf-model="#glb_model1" scale="0.5 0.5 0.5" position="2 0.5 2" rotation="0 0 0"></a-entity>
 	<a-entity gltf-model="#glb_model2" scale="0.5 0.5 0.5" position="-2 0.5 -2" rotation="-90 0 0" animation-mixer="clip: *; timeScale:3;"></a-entity>
-      	<a-sphere position="2 0.5 -2" radius="0.5" color="#EF2D5E"></a-sphere>
-      	<a-cylinder position="-2 0.5 2" radius="0.5" height="1" color="#FFC65D"></a-cylinder>
-      	<a-plane position="0 0 0" rotation="-90 0 0" width="6" height="6" color="#FFFFFF"></a-plane>
-	<a-entity gltf-model="#glb_model1" scale="0.5 0.5 0.5" position="2 0.5 2" rotation="0 0 0"></a-entity>	
-
+    <a-entity gltf-model="#glb_model3" scale="0.5 0.5 0.5" position="2 0.5 -2" rotation="0 0 0"></a-entity>
+	<a-entity gltf-model="#glb_model4" scale="0.5 0.5 0.5" position="-2 0.5 2" rotation="0 0 0"></a-entity>
+    <a-plane position="0 0 0" rotation="-90 0 0" width="6" height="6" color="#FFFFFF"></a-plane>
+		
 	<!-- Camera -->
 	      	<a-entity id="cameraview" position="0 0 20" rotation="0 0 0">
 		<a-camera>
