@@ -32,12 +32,12 @@
 		shadow="castShadow:true"></a-entity><!--floating,idle,wave -->
 	<a-entity gltf-model="#glb_model3" scale="0.005 0.005 0.005" position="2 0 -2" shadow="castShadow:true"></a-entity>
     <a-plane position="0 0 0" rotation="-90 0 0" width="6" height="8.5" color="#FFFFFF" shadow="receive: true"></a-plane>
-	<a-entity gltf-model="#glb_model2" scale="0.5 0.5 0.5" position="-2 0 2" animation-mixer="clip: floating; timeScale:1;"
+	<a-entity gltf-model="#glb_model2" scale="0.5 0.1 0.5" position="-2 0 2" animation-mixer="clip: floating; timeScale:1;"
 		shadow="castShadow:true"></a-entity><!--floating,idle,wave -->
 		
 	<!-- Camera -->
 	    <a-entity id="cameraview" position="0 1 20">
-		<a-entity camera look-controls-enabled="false">
+		<a-entity camera look-controls="enabled: true;">
 		<!--look-controls-enabled="true"=desabilita sensores cámara  look-controls="enabled: true;"=habilita sensores cámara -->
   		<a-entity cursor="fuse: true; fuseTimeout: 500"
             	position="0 0 -3"
@@ -115,6 +115,7 @@
         },true); Otra alternativa*/	
 </script>
 </html>
+
 
 
 
