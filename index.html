@@ -27,13 +27,14 @@
 	<a-asset-item id="glb_model3" src="usa_rocket.glb"></a-asset-item>
   	</a-assets>
 	<!-- Models and primitive objects -->
-	<a-entity gltf-model="#glb_model1" scale="0.5 0.5 0.5" position="2 0.5 2" rotation="0 0 0"></a-entity>
-	<a-entity gltf-model="#glb_model2" scale="0.5 0.5 0.5" position="-2 0 -2" rotation="0 0 0" animation-mixer="clip: moon_walk; timeScale:1;"></a-entity><!--floating,idle,wave -->
-	<a-entity gltf-model="#glb_model3" scale="0.005 0.005 0.005" position="2 0 -2" rotation="0 0 0"></a-entity>
-    <a-plane position="0 0 0" rotation="-90 0 0" width="6" height="6" color="#FFFFFF"></a-plane>
+	<a-entity gltf-model="#glb_model1" scale="0.5 0.5 0.5" position="2 0.5 2" shadow="castShadow:true"></a-entity>
+	<a-entity gltf-model="#glb_model2" scale="0.5 0.5 0.5" position="-2 0 -2" animation-mixer="clip: moon_walk; timeScale:1;"
+		shadow="castShadow:true"></a-entity><!--floating,idle,wave -->
+	<a-entity gltf-model="#glb_model3" scale="0.005 0.005 0.005" position="2 0 -2" shadow="castShadow:true"></a-entity>
+    <a-plane position="0 0 0" rotation="-90 0 0" width="6" height="6" color="#FFFFFF" shadow="receive: true"></a-plane>
 		
 	<!-- Camera -->
-	    <a-entity id="cameraview" position="0 1 20" rotation="0 0 0">
+	    <a-entity id="cameraview" position="0 1 20">
 		<a-entity camera look-controls-enabled="false">
 		<!--look-controls-enabled="true"=desabilita sensores cámara  look-controls="enabled: true;"=habilita sensores cámara -->
   		<a-entity cursor="fuse: true; fuseTimeout: 500"
@@ -112,6 +113,7 @@
         },true); Otra alternativa*/	
 </script>
 </html>
+
 
 
 
